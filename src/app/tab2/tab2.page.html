@@ -1,0 +1,40 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>
+      QR Scan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+
+  <ion-card class="welcome-card" id="card" >
+    <!-- <img src="/assets/scan.jpeg" alt="" /> -->
+    <ion-card-header>
+      <ion-card-title id="card"> QR Code </ion-card-title>
+      <!-- <ion-card-subtitle>Get Started</ion-card-subtitle> -->
+    </ion-card-header>
+    <ion-card-content>
+      <p>Here we can scan a Qr code to get data.</p>
+    </ion-card-content>
+    <ion-button expand='block' margin (click)="goToQrScan()" id="QRButton">Click to scan a QR Code!</ion-button>
+    <div *ngIf="scannedData">
+      <p>
+        Scanned Code Text : <b>{{ scannedData["text"] }}</b>
+      </p>
+      <p>
+        Scanned Code Format : <b>{{ scannedData["format"] }}</b>
+      </p>
+    </div>
+  </ion-card>
+
+  <!-- <ion-card>
+    <h1>Enter Value to Create QR code</h1>
+    <ion-input type="text" [(ngModel)]="encodedData"></ion-input>
+
+    <ion-button (click)="goToCreateCode()">
+      Create QR
+    </ion-button>
+  </ion-card> -->
+
+</ion-content>

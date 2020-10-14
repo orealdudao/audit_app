@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+   
+    <ion-title >Perfil</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="row" mode="ios">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+      <ion-menu-button class="row" mode="ios">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        <h6 >Jhon S.</h6>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu mode="ios" contentId="menu-content" side="end" type="overlay">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Auditor Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label class="ion-padding">Auditor
+          <h2>Level 3</h2>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-content mode="ios">
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
+
+  <ion-card mode="ios" class="company-profile">
+  <ion-avatar class="profile-pic">
+    <img class="logo" src="\assets\icon\audit.png" alt="Logo">
+  </ion-avatar>
+
+
+  <h3><strong>Security Company</strong></h3>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+</ion-card>
+</ion-content>
